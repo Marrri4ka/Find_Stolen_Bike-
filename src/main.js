@@ -1,10 +1,16 @@
 import { StolenBike}  from './stolenbike.js';
 $(document).ready(function() {
-  $('#bikeLocation').click(function() {
+    $('.formBike').submit(function(event) {
+  event.preventDefault();
+    let page = $('.pagination').val();
+    console.log(page);
+
+  // $('#bikeLocation').click(function() {
     let city = $('#location').val();
+    // $('#location').val("");
 
-    $('#location').val("");
 
+    $("#pagenumber").text(page);
 
 
     let stolenBike = new StolenBike();  // create instance of WeatherService class
@@ -28,15 +34,10 @@ $(document).ready(function() {
 
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
     });
-  });
-  $("#page2button").click(function(){
-    let page2 = $("#page2button").val();
-    $("#pagenumber").text(page2);
-  });
-  $("#page3button").click(function(){
-    let page3 = $("#page3button").val();
-    $("#pagenumber").text(page3);
+  // });
 
-  });
 
+
+
+});
 });

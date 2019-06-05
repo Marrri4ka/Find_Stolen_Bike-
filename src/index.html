@@ -9,12 +9,21 @@
     <h1>Stolen Bikes Ride Faster! Of course! </h1>
     <img src="./bike.png" width ='300'><br>
 
-    <input id="location"  type="text">
+
     <button type="click" id="bikeLocation">Pastweek</button>
     <p> Result: <span id="result"></span></p>
     <button value="1" type="click" id="page1button">Page 1</button>
     <button value ="2" type="click" id="page2button">Page 2</button>
     <button value ="3" type="click" id="page3button">Page 3</button>
+    <form class="formBike">
+      <input id="location"  type="text">
+    <select class="pagination">
+      <option value="1" id="page1button">1</option>
+      <option value="2" id="page2button">2</option>
+      <option value="3" id="page3button">3</option>
+    </select>
+    <button type="submit">Submit</button>
+    </form>
     <p>Your page is : <span id="pagenumber"></span><p>
 
 
