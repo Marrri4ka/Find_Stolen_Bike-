@@ -4,32 +4,89 @@
     <meta charset="utf-8">
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <title></title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   </head>
   <body>
-    <h1>Stolen Bikes Ride Faster! Of course! </h1>
-    <img src="./bike.png" width ='300'><br>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-8">
+          <h1>Stolen Bikes </h1>
+        </div>
+        <div class="col-md-3">
+              <img id="img" src="./bike.png" width ='300'><br>
+        </div>
+      </div>
 
 
-    <button type="click" id="bikeLocation">Pastweek</button>
-    <p> Result: <span id="result"></span></p>
-    <button value="1" type="click" id="page1button">Page 1</button>
-    <button value ="2" type="click" id="page2button">Page 2</button>
-    <button value ="3" type="click" id="page3button">Page 3</button>
+    </div>
+
+     <canvas id="myChart" height="100" ></canvas>
+     <form class="manufacturer">
+       <label for="manufacturerSearch">Search by manufacture</label>
+       <input id="manufacturerSearch" type"text">
+       <button id="manufactureButton">Search by manufacture</button>
+     </form>
     <form class="formBike">
+      <label for="location">Search by location</label>
       <input id="location"  type="text">
+      <button type="submit">Search</button>
     <select class="pagination">
       <option value="1" id="page1button">1</option>
       <option value="2" id="page2button">2</option>
       <option value="3" id="page3button">3</option>
     </select>
-    <button type="submit">Submit</button>
+
     </form>
-    <p>Your page is : <span id="pagenumber"></span><p>
+
+    <!-- <p>Your page is : <span id="pagenumber"></span><p> -->
+      <button id="showColor">Show favorites colors 2018</button>
+      <div class="showColor"></div>
+
 
 
     <div class="showTitle"></div>
+    <div class="showManufacture"></div>
     <div class="showYear"></div>
     <div class="errors"></div>
 
   </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div id="myOverlay" class="overlay">
+      <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+      <div class="overlay-content">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search" required autofocus>
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <center>
+        <h2 style="margin-top:100px;">Fullscreen Search</h2>
+        <p>Click on the button to open the search box.</p>
+        <button style="margin-bottom:50px;" class="btn openBtn" onclick="openSearch()">Open Search Box</button>
+    </center>
+
+</body>
 </html>
