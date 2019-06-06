@@ -16,25 +16,14 @@
 
 
      <canvas id="myChart" height="100" ></canvas>
-     <form class="manufacturer">
-       <label for="manufacturerSearch">Search by manufacture</label>
-       <input id="manufacturerSearch" type"text">
-       <button id="manufactureButton">Search by manufacture</button>
-     </form>
-    <form class="formBike">
-      <label for="location">Search by location</label>
-      <input id="location"  type="text">
-      <button type="submit">Search</button>
-    <select class="pagination">
-      <option value="1" id="page1button">1</option>
-      <option value="2" id="page2button">2</option>
-      <option value="3" id="page3button">3</option>
-    </select>
 
-    </form>
+
+
+
+
 
     <!-- <p>Your page is : <span id="pagenumber"></span><p> -->
-      <button id="showColor">Show favorites colors 2018</button>
+
       <div class="showColor"></div>
 
 
@@ -48,9 +37,6 @@
 </html>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,21 +44,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+
+  <div class="container">
+<img id="img" src="./bike.png" width ='300'><br>
+  </div>
 
 
 
-            <img id="img" src="./bike.png" width ='300'><br>
+
 
 
 
     <div id="myOverlay" class="overlay">
       <span class="closebtn" type="click" title="Close Overlay">×</span>
       <div class="overlay-content">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search" required autofocus>
-          <button type="submit"><i class="fa fa-search"></i></button>
+
+        <form class="manufacturer" action="/action_page.php">
+          <input id="manufacturerSearch" type="text" placeholder="Search by manufacturer" name="search" required autofocus>
+          <button  id="manufactureButton"type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <form class="formBike" action="/action_page.php">
+          <input id="location" type="text" placeholder="Search by city " name="search" required autofocus>
+          <button  type="submit"><i class="fa fa-search"></i></button>
+          <select class="pagination">
+            <option value="1" id="page1button">1</option>
+            <option value="2" id="page2button">2</option>
+            <option value="3" id="page3button">3</option>
+          </select>
         </form>
       </div>
     </div>
@@ -80,7 +78,8 @@
     <center>
         <h2 style="margin-top:100px;">Find Stolen Bike</h2>
         <p>Click on the button to open the search box.</p>
-        <button style="margin-bottom:50px;" class="openBtn" type="click">Open Search Box</button>
+        <button id="open"style="margin-bottom:50px;" class="openBtn" type="click">Open Search Box</button><br>
+              <button  class="openBtn" type="click" style="margin-bottom:50px;" id="showColor">How many red and blue bikes were stolen in the past year</button>
     </center>
 
 </body>

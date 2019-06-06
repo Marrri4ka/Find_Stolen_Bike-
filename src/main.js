@@ -8,7 +8,7 @@ import './styles.css';
 
 $(document).ready(function() {
 
-    $('.openBtn').click(function(){
+    $('#open').click(function(){
       $('.overlay').slideDown();
 
     });
