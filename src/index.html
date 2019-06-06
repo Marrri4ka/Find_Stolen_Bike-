@@ -13,18 +13,7 @@
   </head>
   <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <div class="jumbotron">
-      <div class="row">
-        <div class="col-md-8">
-          <h1>Stolen Bikes </h1>
-        </div>
-        <div class="col-md-3">
-              <img id="img" src="./bike.png" width ='300'><br>
-        </div>
-      </div>
 
-
-    </div>
 
      <canvas id="myChart" height="100" ></canvas>
      <form class="manufacturer">
@@ -72,8 +61,14 @@
 </head>
 <body>
 
+
+
+            <img id="img" src="./bike.png" width ='300'><br>
+
+
+
     <div id="myOverlay" class="overlay">
-      <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+      <span class="closebtn" type="click" title="Close Overlay">×</span>
       <div class="overlay-content">
         <form action="/action_page.php">
           <input type="text" placeholder="Search.." name="search" required autofocus>
@@ -83,9 +78,9 @@
     </div>
 
     <center>
-        <h2 style="margin-top:100px;">Fullscreen Search</h2>
+        <h2 style="margin-top:100px;">Find Stolen Bike</h2>
         <p>Click on the button to open the search box.</p>
-        <button style="margin-bottom:50px;" class="btn openBtn" onclick="openSearch()">Open Search Box</button>
+        <button style="margin-bottom:50px;" class="openBtn" type="click">Open Search Box</button>
     </center>
 
 </body>

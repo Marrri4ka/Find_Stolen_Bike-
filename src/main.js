@@ -7,13 +7,22 @@ import './styles.css';
 
 
 $(document).ready(function() {
-  function openSearch() {
-      document.getElementById("myOverlay").style.display = "block";
-  }
 
-  function closeSearch() {
-      document.getElementById("myOverlay").style.display = "none";
-  }
+    $('.openBtn').click(function(){
+      $('.overlay').slideDown();
+
+    });
+
+    $('.closebtn').click(function(){
+      $('.overlay').slideUp();
+
+    });
+      // document.getElementById("myOverlay").style.display = "block";
+
+
+  // function closeSearch() {
+  //     document.getElementById("myOverlay").style.display = "none";
+  // }
 
 
     $('.formBike').submit(function(event) {
@@ -99,21 +108,21 @@ $(document).ready(function() {
 
   }
 
-//   var ctx = document.getElementById("myChart").getContext('2d');
-//   var myChart = new Chart(ctx, {
-//   type: 'pie',
-//   data: {
-//     labels: [ "Red", "Blue"],
-//     datasets: [{
-//       backgroundColor: [
-//
-//         "#e74c3c",
-//         "#34495e"
-//       ],
-//       data: [ colorRed,  colorBlue]
-//     }]
-//   }
-// });
+  var ctx = document.getElementById("myChart").getContext('2d');
+  var myChart = new Chart(ctx, {
+  type: 'pie',
+  data: {
+    labels: [ "Red", "Blue"],
+    datasets: [{
+      backgroundColor: [
+
+        "#e74c3c",
+        "#34495e"
+      ],
+      data: [ colorRed,  colorBlue]
+    }]
+  }
+});
 
 
     $('#result').text(yearAgo);
